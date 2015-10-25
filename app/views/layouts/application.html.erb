@@ -1,0 +1,99 @@
+<!doctype html>
+<html ng-app="arcticFront">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>Arctic Beverage Group</title>
+  <meta name="theme-color" content="#333">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="apple-touch-icon" href="touchicon.png">
+  <link rel="icon" href="favicon.png">
+  <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+  <!-- or, set /favicon.ico for IE10 win -->
+  <meta name="msapplication-TileImage" content="tileicon.png">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+
+<div id="site-wrapper" class="group" itemscope itemtype="http://schema.org/Corporation">
+    <header id="site-header">
+      <!-- Move header to partial -->
+      <div id="header-grid-container" class="grid-container">
+
+        <div id="site-header-logo-container" class="column">
+          <a ui-sref="home" autoscroll="true" id="site-header-logo" class="header-button">&nbsp;</a>
+        </div>
+
+        <div id="open-mobile-menu-container" class="column mobile-menu-button-container">
+          <a href="#" id="open-mobile-menu" class="header-button site-menu-toggle-btn">&nbsp;</a>
+        </div>
+
+        <div id="site-nav-container" class="closed">
+          <nav id="site-nav" class="column">
+            <div id="close-mobile-menu-container" class="group grid-container column mobile-menu-button-container">
+              <a href="#" id="close-mobile-menu" class="header-button site-menu-toggle-btn">&nbsp;</a>
+            </div>
+            <ul>
+              <li><a ui-sref="products" autoscroll="true">Products</a></li>
+              <li><a ui-sref="news" autoscroll="true">News</a></li>
+              <li><a class="nav-anchor" ui-sref="home({'#': 'about'})">About</a></li>
+              <li><a class="nav-anchor" ui-sref="home({'#': 'contact'})">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+      <!-- End move header to partial -->
+    </header>
+    <div id="site-content-wrapper" class="view-transition">
+      <%= yield %>
+
+      
+
+
+
+    </div>
+    <footer id="site-footer">
+      <!-- Move footer to partial -->
+      <div class="grid-container">
+        <div id="footer-logo" class="column">
+          <img id="footer-logo-svg" src="assets/images/svg/arctic-group-large-logo-white.svg" alt="Arctic Beverage Group logo">
+        </div>
+        <div class="column footer-info">
+          <h1 class="footer-small-titles">Contact</h1>
+          <p><a href="mailto:post@articbeverage.com"><span itemprop="email">post@articbeverage.com</span></a></p>
+          <p><a href="tel:+4791161062"><span itemprop="telephone">+47 911 61 062</span></a></p>
+        </div>
+        <address class="column footer-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <h1 class="footer-small-titles">Visit</h1>
+          <p><span itemprop="streetAddress">Fridtjof Nansens vei 3</span></p>
+          <p><span itemprop="postalCode">1366</span> <span itemprop="addressLocality">Lysaker</span>, <span itemprop="addressCountry">Norway</span></p>
+        </address>
+        <div class="column footer-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <h1 class="footer-small-titles">Mail</h1>
+          <p>P.O. Box <span itemprop="postOfficeBoxNumber">238</span></p>
+          <p><span itemprop="postalCode">1326</span> <span itemprop="addressLocality">Lysaker</span>, <span itemprop="addressCountry">Norway</span></p>
+        </div>
+        <div class="column footer-info">
+          <h1 class="footer-small-titles">Social</h1>
+          <div class="footer-social-container">
+            <a href="#" id="facebook-icon" class="footer-social-icon">&nbsp;</a>
+            <a href="#" id="twitter-icon" class="footer-social-icon">&nbsp;</a>
+            <a href="#" id="instagram-icon" class="footer-social-icon">&nbsp;</a>
+            <a href="#" id="pinterest-icon" class="footer-social-icon">&nbsp;</a>
+          </div>
+        </div>
+      </div>
+      <!-- End move footer to partial -->
+    </footer>
+  </div>
+
+</body>
+</html>

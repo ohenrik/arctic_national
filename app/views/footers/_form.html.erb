@@ -1,0 +1,73 @@
+<%= form_for(@footer) do |f| %>
+  <% if @footer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@footer.errors.count, "error") %> prohibited this footer from being saved:</h2>
+
+      <ul>
+      <% @footer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :v_street %><br>
+    <%= f.text_field :v_street %>
+  </div>
+  <div class="field">
+    <%= f.label :v_zip_code %><br>
+    <%= f.text_field :v_zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :v_state %><br>
+    <%= f.text_field :v_state %>
+  </div>
+  <div class="field">
+    <%= f.label :v_country %><br>
+    <%= f.text_field :v_country %>
+  </div>
+  <div class="field">
+    <%= f.label :m_p_o_box %><br>
+    <%= f.text_field :m_p_o_box %>
+  </div>
+  <div class="field">
+    <%= f.label :m_zip_code %><br>
+    <%= f.text_field :m_zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :m_state %><br>
+    <%= f.text_field :m_state %>
+  </div>
+  <div class="field">
+    <%= f.label :m_country %><br>
+    <%= f.text_field :m_country %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook_url %><br>
+    <%= f.text_field :facebook_url %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter_url %><br>
+    <%= f.text_field :twitter_url %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin_url %><br>
+    <%= f.text_field :linkedin_url %>
+  </div>
+  <div class="field">
+    <%= f.label :pinterest_url %><br>
+    <%= f.text_field :pinterest_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
