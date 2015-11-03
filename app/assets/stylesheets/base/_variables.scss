@@ -1,0 +1,49 @@
+// Colors
+$color-black:         #333;
+$color-white:         #fff;
+$color-gray:          #999;
+$color-light-gray:    #f2f2f2;
+$color-gold:          #c27622;
+$color-blue-1:        #ecf4f6;
+$color-blue-1-hover:  rgba(236, 244, 246, 0.5);
+$color-blue-2:        #dfe9ea;
+$color-blue-2-hover:  rgba(223, 233, 234, 0.5);
+$color-blue-2-alpha:  rgba(223, 233, 234, 0.75);
+$color-blue-3:        #c7d5d8;
+$color-blue-3-hover:  rgba(199, 213, 216, 0.5);
+$color-blue-cover:    #f3f6f8;
+
+// Font sizes
+$font-size-body-text: 1rem;
+$font-size-h1:        2rem;
+$font-size-h1-small:  1rem;
+$font-size-h2:        1rem;
+$font-size-ingress:   1rem;
+
+// Sizes
+$brakepoint-mobile:     (max-width 600px);
+$brakepoint-tablet:     (min-width 601px);
+$brakepoint-laptop:     min-width 901px;
+$brakepoint-desktop:    min-width 1601px;
+$brakepoint-portrait:   (orientation portrait);
+$brakepoint-landscape:  (orientation landscape);
+
+// Grid variables
+$column-span-1:  8.33%;
+$column-span-2:  16.66%;
+$column-span-3:  24.99%;
+$column-span-4:  33.32%;
+$column-span-5:  41.65%;
+$column-span-6:  49.98%;
+$column-span-7:  58.31%;
+$column-span-8:  66.64%;
+$column-span-9:  74.97%;
+$column-span-10: 83.3%;
+$column-span-11: 91.63%;
+$column-span-12: 100%;
+
+// Margins
+$margin-content-block-mobile: 1em;
+$margin-content-block-tablet: 0.8em;
+$margin-content-block-laptop: 1.8em;
+$margin-content-block-desktop: 2.3em;

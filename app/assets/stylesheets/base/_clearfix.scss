@@ -1,0 +1,6 @@
+// Add to parent
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}

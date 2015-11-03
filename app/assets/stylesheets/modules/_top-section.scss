@@ -1,0 +1,69 @@
+#top-section {
+  height: 25.8rem;
+  @include breakpoint($brakepoint-mobile) {
+    background-color: $color-blue-2-alpha;
+  }
+  @include breakpoint($brakepoint-tablet) {
+    height: 25rem;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    height: 35.25rem;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    height: 38rem;
+  }
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .column {
+    height: auto;
+    text-align: center;
+    @include breakpoint($brakepoint-mobile) {
+      width: 93%;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      width: 52%;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      width: 50%;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      width: 30%;
+    }
+    #top-section-logo {
+      margin-top: 0.5rem;
+      @include breakpoint($brakepoint-mobile) {
+        width: 80%;
+        margin-bottom: 1.1rem;
+      }
+      @include breakpoint($brakepoint-tablet) {
+        width: 80%;
+        margin-bottom: 1rem;
+      }
+      @include breakpoint($brakepoint-laptop) {
+        width: 80%;
+        margin-top: 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+      @include breakpoint($brakepoint-desktop) {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
+    }
+    #top-section-text {
+      // margin-bottom: 1.8rem;
+      // @include breakpoint($brakepoint-tablet) {
+      //   margin-bottom: 1.4rem;
+      // }
+      // @include breakpoint($brakepoint-laptop) {
+      //   margin-bottom: 2.9rem;
+      // }
+      // @include breakpoint($brakepoint-desktop) {
+      //   margin-bottom: 2.3rem;
+      // }
+    }
+  }
+}

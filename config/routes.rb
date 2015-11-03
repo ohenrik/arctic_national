@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  mount_activeadmin_settings()
   resources :brands
   resources :footers
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root to: "pages#index"
+  root to: "static_pages#front_page"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

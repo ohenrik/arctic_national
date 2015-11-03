@@ -1,0 +1,98 @@
+<section id="top-section" class="section bleed-section">
+  <div id="top-section-container" class="grid-container">
+    <div class="column">
+      <img id="top-section-logo" src="<%= image_url('svg/arctic-norway-large-logo-black.svg') %>" alt="Arctic Beverage Group" itemprop="name">
+      <div id="top-section-text" ><p><%= GeneralContent.find_by( key: 'top_section_text' ).value %></p></div>
+    </div>
+  </div>
+  <div class="background-image-block mobile" style="background-image: url(<%= image_url('top-image-arctic-wine-and-spirits-national-mobile.jpg') %>)"></div>
+  <div class="background-image-block tablet" style="background-image: url(<%= image_url('top-image-arctic-wine-and-spirits-national-tablet.jpg') %>)"></div>
+  <div class="background-image-block laptop" style="background-image: url(<%= image_url('top-image-arctic-wine-and-spirits-national-laptop.jpg') %>)"></div>
+  <div class="background-image-block desktop" style="background-image: url(<%= image_url('top-image-arctic-wine-and-spirits-national-desktop.jpg') %>)"></div>
+</section>
+
+<section id="news-section" class="section content-section">
+  <div class="grid-container">
+    <div class="column content-block small-left-block">
+      <h1 id="news-section-h1" class="gray-header">News</h1>
+    </div>
+    <div class="content-block large-right-block">
+      <article class="column column-span-12">
+        <a href="#"><h1>New discovery: NASA finds wine on the moon</h1></a>
+      </article>
+      <article class="column column-span-12">
+        <a href="#"><h1>Beer is made by men, wine by God</h1></a>
+      </article>
+      <article class="column column-span-12">
+        <a href="#"><h1>Kort tekst</h1></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section content-section">
+  <article class="grid-container">
+    <div class="column content-block small-left-block">
+      <h1 class="gray-header">About us</h1>
+    </div>
+    <div class="column content-block large-right-block" itemprop="description">
+      <%= GeneralContent.find_by( key: 'about_text' ).value.html_safe %>
+    </div>
+  </article>
+</section>
+
+<section id="home-products-section" class="section content-section">
+  <div class="grid-container extra-padding">
+    <div class="column column-span-12 content-block">
+      <h1 class="gray-header">Our Products</h1>
+    </div>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Red wines</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">White wines</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Rosé wines</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Sparkling wines</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Dessert wines</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Spirits</p>
+      <div class="home-product-thumb"></div>
+    </a>
+    <a href="#" class="column home-product-block">
+      <p class="small-titles small-titles-underline">Other</p>
+      <div class="home-product-thumb"></div>
+    </a>
+  </div>
+</section>
+
+<section id="contact" class="group section content-section top-spaceing">
+  <div class="grid-container">
+    <div class="column content-block small-left-block">
+      <h1 class="gray-header">Contact</h1>
+    </div>
+    <div class="large-right-block">
+
+      <% Contact.all.each do |contact| %>
+      <div class="column content-block single-contact">
+        <p><%= contact.name %></p>
+        <p><%= contact.position %></p>
+        <p><a href="mailto:<%= contact.email %>"><%= contact.email %></a></p>
+        <p><a href="tel:<%= contact.phone %>"><%= contact.phone %></a></p>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</section>

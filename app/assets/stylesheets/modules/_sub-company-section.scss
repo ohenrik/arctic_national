@@ -1,0 +1,62 @@
+#sub-company-section {
+  display: flex;
+  @include breakpoint($brakepoint-mobile) {
+    flex-wrap: wrap;
+  }
+}
+.sub-company-block {
+  display: block;
+  flex-grow: 1;
+  text-align: center;
+  transition: background-color 0.2s;
+  @include breakpoint($brakepoint-mobile) {
+    padding: 2rem 0;
+  }
+  @include breakpoint($brakepoint-tablet) {
+    padding: 2rem 0;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    padding: 3.5rem 0;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    padding: 3.1rem 0;
+  }
+  .sub-company-image {
+    display: block;
+    margin: auto;
+    width: 65%;
+    @include breakpoint($brakepoint-mobile) {
+      padding-bottom: 1rem;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      padding-bottom: 1rem;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      padding-bottom: 2.2rem;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      padding-bottom: 2rem;
+      width: 35%;
+    }
+  }
+}
+#sub-company-norway {
+  background-color: $color-blue-1;
+
+}
+#sub-company-sweden {
+  background-color: $color-blue-2;
+}
+#sub-company-us {
+  background-color: $color-blue-3;
+
+}
+#sub-company-norway:hover, #sub-company-norway:focus {
+  background-color: $color-blue-1-hover;
+}
+#sub-company-sweden:hover, #sub-company-sweden:focus {
+  background-color: $color-blue-2-hover;
+}
+#sub-company-us:hover, #sub-company-us:focus {
+  background-color: $color-blue-3-hover;
+}

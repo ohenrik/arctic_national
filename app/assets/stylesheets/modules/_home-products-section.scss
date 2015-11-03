@@ -1,0 +1,33 @@
+.home-product-block {
+  @include breakpoint($brakepoint-mobile) {
+    width: $column-span-6;
+    //height: 3rem;
+  }
+  @include breakpoint($brakepoint-tablet) {
+    width: $column-span-6;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    width: $column-span-3;
+  }
+  @include breakpoint($brakepoint-desktop) {
+  }
+  .home-product-thumb {
+    background-color: $color-blue-2;
+    transition: background-color 0.3s, color 0.3s;
+    @include breakpoint($brakepoint-mobile) {
+      height: 8rem;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      height: 12rem;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      height: 11rem;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      height: 13rem;
+    }
+  }
+}
+.home-product-block:hover .home-product-thumb, .home-product-block:focus .home-product-thumb {
+  background-color: $color-gold;
+}

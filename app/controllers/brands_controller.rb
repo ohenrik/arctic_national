@@ -6,4 +6,3 @@ class BrandsController < InheritedResources::Base
       params.require(:brand).permit(:name, :logo, :description)
     end
 end
-

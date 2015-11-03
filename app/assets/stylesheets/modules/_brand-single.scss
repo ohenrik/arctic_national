@@ -1,0 +1,50 @@
+.brand-logo-container {
+  text-align: center;
+  img {
+    max-width: 100%;
+    max-height: 30vw;
+    @include breakpoint($brakepoint-mobile) {
+      max-width: 75%;
+      max-height: 50vw;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      max-height: 40vw;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      max-height: 30vw;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      max-height: 25vw;
+    }
+  }
+}
+.product-spesification-list li, .product-spesification-list-title {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.5em;
+}
+.product-spesification-list-title {
+  margin-top: 6rem;
+  @include breakpoint($brakepoint-mobile) {
+    margin-top: 2rem;
+  }
+}
+.product-image-container {
+  text-align: center;
+  img {
+    max-width: 100%;
+    max-height: 30vw;
+    @include breakpoint($brakepoint-mobile) {
+      max-height: 100vw;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      max-height: 70vw;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      max-height: 45vw;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      max-height: 35vw;
+    }
+  }
+}

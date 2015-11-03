@@ -1,0 +1,32 @@
+#contact {
+  background-color: $color-blue-2;
+  margin-top: $margin-content-block-mobile;
+  padding-top: $margin-content-block-mobile;
+  padding-bottom: $margin-content-block-mobile;
+  @include breakpoint($brakepoint-tablet) {
+    margin-top: $margin-content-block-tablet;
+    padding-top: $margin-content-block-tablet;
+    padding-bottom: $margin-content-block-tablet;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    margin-top: $margin-content-block-laptop;
+    padding-top: $margin-content-block-laptop;
+    padding-bottom: $margin-content-block-laptop;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    margin-top: $margin-content-block-desktop;
+    padding-top: $margin-content-block-desktop;
+    padding-bottom: $margin-content-block-desktop;
+  }
+  .single-contact {
+    width: $column-span-12;
+    height: auto;
+    float: left;
+    @include breakpoint($brakepoint-laptop) {
+      width: $column-span-6;
+    }
+    p {
+      text-indent: 0;
+    }
+  }
+}

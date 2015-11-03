@@ -1,0 +1,71 @@
+.section {
+  position: relative;
+}
+.section:last-of-type {
+  padding-bottom: $margin-content-block-mobile;
+  @include breakpoint($brakepoint-tablet) {
+    padding-bottom: $margin-content-block-tablet;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    padding-bottom: $margin-content-block-laptop;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    padding-bottom: $margin-content-block-desktop;
+  }
+}
+.content-section {
+  box-sizing: border-box;
+}
+.background-image-block {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.bleed-section + .content-section {
+  padding-top: $margin-content-block-mobile;
+  @include breakpoint($brakepoint-tablet) {
+    padding-top: $margin-content-block-tablet;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    padding-top: $margin-content-block-laptop;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    padding-top: $margin-content-block-desktop;
+  }
+}
+.sub-page-content-wrapper {
+  padding-top: calc(4 * #{$margin-content-block-mobile});
+  @include breakpoint($brakepoint-tablet) {
+    padding-top: calc(8 * #{$margin-content-block-tablet});
+  }
+  @include breakpoint($brakepoint-laptop) {
+    padding-top: calc(4 * #{$margin-content-block-laptop});
+  }
+  @include breakpoint($brakepoint-desktop) {
+    padding-top: calc(4 * #{$margin-content-block-desktop});
+  }
+  .large-right-block {
+    img {
+      display: block;
+      width: 100%;
+    }
+    p + img, img + p {
+      margin-top: 1em;
+    }
+    padding-bottom: calc(2 * #{$margin-content-block-mobile});
+    @include breakpoint($brakepoint-tablet) {
+      padding-bottom: calc(4 * #{$margin-content-block-tablet});
+    }
+    @include breakpoint($brakepoint-laptop) {
+      padding-bottom: calc(2 * #{$margin-content-block-laptop});
+    }
+    @include breakpoint($brakepoint-desktop) {
+      padding-bottom: calc(2 * #{$margin-content-block-desktop});
+    }
+  }
+}

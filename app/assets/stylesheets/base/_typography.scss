@@ -1,0 +1,151 @@
+body, p, .small-titles, .footer-small-titles {
+  font-family:'Univers LT W01_45 Light1475944', helvetica, arial;
+}
+h1, h2, .action_button, .header-publish-date, .sub-company-text-block {
+  font-family:'Univers LT W01_57 Condensed', helvetica, arial;
+}
+h1, h2, .action_button, .header-publish-date, .sub-company-text-block {
+  font-size: 1.25rem;
+  line-height: 1.2em;
+  display: block;
+}
+p {
+  font-size: 1em;
+  line-height: 1.55rem;
+  text-indent: 1.5em;
+}
+img + p {
+  text-indent: 0;
+}
+.gray-header, .header-publish-date {
+  color: $color-gray;
+}
+::selection {
+  color: $color-white;
+  background-color: $color-gold;
+}
+a, a>h2 {
+  color: $color-gold;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+p a:hover, p a:focus, .product-spesification-list a:hover, .product-spesification-list a:focus {
+  text-decoration: underline;
+}
+p a:focus {
+  outline: auto;
+}
+a>h1, a>h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 0.4rem solid rgba(0, 0, 0, 0);
+  display: inline-block;
+}
+#news-section article:last-of-type {
+  margin-bottom: -2.6rem;
+}
+a:hover>h1, a:focus>h1, a:hover>h2, a:focus>h2 {
+  border-bottom: 0.4rem solid;
+}
+.action_button, .sub-company-text-block {
+  //color: $color-gold;
+  display: inline-block;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.25em;
+}
+.action_button {
+  min-width: 8.1rem;
+  border: 0.1rem solid $color-gold;
+  padding: 0.62rem 1.2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.action_button:hover, .action_button:focus {
+  color: $color-white;
+  border-color: $color-gold;
+  background-color: $color-gold;
+}
+.small-titles, .footer-small-titles {
+  letter-spacing: 0.15em;
+  color: $color-gray;
+  text-transform: uppercase;
+}
+.small-titles {
+  font-size: 0.5rem;
+}
+.smaller-text {
+  font-size: 0.6rem;
+}
+.footer-small-titles {
+  font-size: 12px;
+  @include breakpoint($brakepoint-desktop) {
+    font-size: 14px;
+  }
+}
+.small-titles-underline, .product-spesification-list li {
+  border-bottom: 1px solid $color-gray;
+  padding-bottom: 0.3em;
+  margin-bottom: 1rem;
+}
+.news-section .small-titles-underline {
+  margin-bottom: 1.5rem;
+}
+p:first-of-type, img>p, #site-footer p {
+  text-indent: 0;
+}
+#site-header {
+  text-transform: uppercase;
+  @include breakpoint($brakepoint-mobile) {
+    font-size: 1rem;
+    letter-spacing: 0.26em;
+  }
+  @include breakpoint($brakepoint-tablet) {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+  // @include breakpoint($brakepoint-desktop) {
+  //   font-size: 14px;
+  // }
+}
+#site-nav {
+  @include breakpoint($brakepoint-mobile) {
+    ul a {
+      font-family:'Univers LT W01_57 Condensed', helvetica, arial;
+      color: $color-white;
+    }
+    ul a:hover, ul a:focus {
+      color: $color-white;
+      background-color: $color-gold;
+    }
+  }
+  @include breakpoint($brakepoint-tablet) {
+    a {
+      color: $color-black;
+      padding: 0.6em 0.4em;
+      padding-bottom: 0.6em;
+      border-bottom: 0.6em solid rgba(0, 0, 0, 0);
+    }
+    a:hover, a:focus {
+      border-bottom: 0.6em solid $color-gold;
+    }
+  }
+}
+#site-footer {
+  font-size: 12px;
+  // @include breakpoint($brakepoint-tablet) {
+  //   font-size: 11px;
+  // }
+  // @include breakpoint($brakepoint-laptop) {
+  //   font-size: 10px;
+  // }
+  // @include breakpoint($brakepoint-desktop) {
+  //   font-size: 14px;
+  // }
+  p {
+    margin: 0;
+    line-height: 1.7em;
+    letter-spacing: 0.05em;
+  }
+}

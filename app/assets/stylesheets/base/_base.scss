@@ -1,0 +1,99 @@
+:root {
+  font-size: 5vw;
+  @include breakpoint($brakepoint-tablet) {
+    font-size: 2.2vw;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    font-size: 1.56vw;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    font-size: 0.86vw;
+  }
+}
+html, body {
+  height: 100%;
+}
+body {
+  color: $color-black;
+}
+@include breakpoint($brakepoint-mobile) {
+  .tablet, .laptop, .desktop, .tablet.inline, .laptop.laptop, .desktop.inline  {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .mobile.inline {
+    display: inline;
+  }
+}
+@include breakpoint($brakepoint-tablet) {
+  .mobile, .laptop, .desktop, .mobile.inline, .laptop.inline, .desktop.inline  {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .tablet.inline {
+    display: inline;
+  }
+}
+@include breakpoint($brakepoint-laptop) {
+  .mobile, .tablet, .desktop, .mobile.inline, .tablet.inline, .desktop.inline {
+    display: none;
+  }
+  .laptop {
+    display: block;
+  }
+  .laptop.inline {
+    display: inline;
+  }
+}
+@include breakpoint($brakepoint-desktop) {
+  .mobile, .tablet, .laptop, .mobile.inline, .tablet.inline, .laptop.inline  {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .desktop.inline {
+    display: inline;
+  }
+}
+a.column {
+  display: block;
+}
+.extra-padding {
+  padding-bottom: calc(1 * #{$margin-content-block-mobile});
+  @include breakpoint($brakepoint-tablet) {
+    padding-bottom: calc(1 * #{$margin-content-block-tablet});
+  }
+  @include breakpoint($brakepoint-laptop) {
+    padding-bottom: calc(1 * #{$margin-content-block-laptop});
+  }
+  @include breakpoint($brakepoint-desktop) {
+    padding-bottom: calc(1 * #{$margin-content-block-desktop});
+  }
+}
+#site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #site-wrapper {
+    display: block;
+  }
+}
+#site-content-wrapper {
+  min-height: 100%;
+  flex: 1;
+}
+.mobile-flex-wrap {
+  @include breakpoint($brakepoint-mobile) {
+    flex-wrap: wrap;
+  }
+}
+.view-transition {
+  transition: opacity 0.5s;
+}

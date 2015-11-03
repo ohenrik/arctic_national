@@ -1,0 +1,92 @@
+.grid-container {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 94.67vw;
+  height: 100%;
+  margin: auto;
+  @include breakpoint($brakepoint-tablet) {
+    width: 81.7vw;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    width: 75vw;
+  }
+  @include breakpoint($brakepoint-desktop) {
+    width: 69.2vw;
+  }
+  .column {
+    height: 100%;
+    box-sizing: border-box;
+    // padding: 2.82%;
+    // @include breakpoint($brakepoint-tablet) {
+    //   padding: 1.59%;
+    // }
+    // @include breakpoint($brakepoint-laptop) {
+    //   padding: 1%;
+    // }
+    // @include breakpoint($brakepoint-desktop) {
+    //   padding: 0.6%;
+    // }
+    @include breakpoint($brakepoint-mobile) {
+      padding: 0.7rem;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      padding: 0.6rem;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      padding: 0.5rem;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      padding: 0.6rem;
+    }
+  }
+  .column-span-1 {
+    width: $column-span-1;
+  }
+  .column-span-2 {
+    width: $column-span-2;
+  }
+  .column-span-3 {
+    width: $column-span-3;
+  }
+  .column-span-4 {
+    width: $column-span-4;
+  }
+  .column-span-5 {
+    width: $column-span-5;
+  }
+  .column-span-6 {
+    width: $column-span-6;
+  }
+  .column-span-7 {
+    width: $column-span-7;
+  }
+  .column-span-8 {
+    width: $column-span-8;
+  }
+  .column-span-9 {
+    width: $column-span-9;
+  }
+  .column-span-10 {
+    width: $column-span-10;
+  }
+  .column-span-11 {
+    width: $column-span-11;
+  }
+  .column-span-12 {
+    width: $column-span-12;
+  }
+  .column-span-1, .column-span-2, .column-span-3, .column-span-4, .column-span-5, .column-span-6, .column-span-7, .column-span-8, .column-span-9, .column-span-10, .column-span-11 {
+    @include breakpoint($brakepoint-mobile) {
+      width: $column-span-12;
+    }
+  }
+  .test-column {
+    min-height: 100vh; //test
+    background-color: $color-blue-1;
+    .test-content {
+      background-color: $color-blue-3;
+      width: 100%;
+    }
+  }
+}

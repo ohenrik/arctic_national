@@ -1,0 +1,32 @@
+.product-brand-overview-block {
+  @include breakpoint($brakepoint-mobile) {
+    width: $column-span-12;
+  }
+  @include breakpoint($brakepoint-tablet) {
+    width: $column-span-4;
+  }
+  @include breakpoint($brakepoint-laptop) {
+    width: $column-span-4;
+  }
+  @include breakpoint($brakepoint-desktop) {
+  }
+  .product-brand-overview-thumb {
+    background-color: $color-light-gray;
+    transition: background-color 0.3s, color 0.3s;
+    @include breakpoint($brakepoint-mobile) {
+      height: 8rem;
+    }
+    @include breakpoint($brakepoint-tablet) {
+      height: 8rem;
+    }
+    @include breakpoint($brakepoint-laptop) {
+      height: 11rem;
+    }
+    @include breakpoint($brakepoint-desktop) {
+      height: 15rem;
+    }
+  }
+}
+.product-brand-overview-block:hover .product-brand-overview-thumb, .product-brand-overview-block:focus .product-brand-overview-thumb {
+  background-color: $color-gray;
+}

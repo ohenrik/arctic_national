@@ -55,7 +55,7 @@
     <div id="site-content-wrapper" class="view-transition">
       <%= yield %>
 
-      
+
 
 
 
@@ -64,7 +64,7 @@
       <!-- Move footer to partial -->
       <div class="grid-container">
         <div id="footer-logo" class="column">
-          <img id="footer-logo-svg" src="assets/images/svg/arctic-group-large-logo-white.svg" alt="Arctic Beverage Group logo">
+          <img id="footer-logo-svg" src="<%= image_url('svg/arctic-group-large-logo-white.svg') %>" alt="Arctic Beverage Group logo">
         </div>
         <div class="column footer-info">
           <h1 class="footer-small-titles">Contact</h1>
@@ -94,6 +94,6 @@
       <!-- End move footer to partial -->
     </footer>
   </div>
-
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/04ccb3a8-cec9-4c6a-aff1-95b80d989eac.js"></script>
 </body>
 </html>
