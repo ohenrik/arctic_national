@@ -16,4 +16,6 @@ ActiveAdmin.register GeneralContent do
     f.actions
   end
 
+  config.filters = false
+  
 end

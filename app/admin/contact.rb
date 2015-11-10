@@ -9,6 +9,7 @@ ActiveAdmin.register Contact do
     end
     f.actions
   end
+  
   index do
     # Gjør sorterbar!!!
     column :name do |contact|
@@ -16,5 +17,7 @@ ActiveAdmin.register Contact do
     end
     actions
   end
+
+  config.filters = false
 
 end

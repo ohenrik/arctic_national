@@ -26,4 +26,6 @@ ActiveAdmin.register Product do
     actions
   end
 
+  config.filters = false
+
 end

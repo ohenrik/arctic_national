@@ -19,4 +19,6 @@ ActiveAdmin.register Brand do
     actions
   end
 
+  config.filters = false
+  
 end
