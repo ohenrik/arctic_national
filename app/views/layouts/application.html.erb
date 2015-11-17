@@ -68,18 +68,18 @@
         </div>
         <div class="column footer-info">
           <h1 class="footer-small-titles">Contact</h1>
-          <p><a href="mailto:post@articbeverage.com"><span itemprop="email">post@articbeverage.com</span></a></p>
-          <p><a href="tel:+4791161062"><span itemprop="telephone">+47 911 61 062</span></a></p>
+          <p><a href="mailto:<%= GeneralContent.find_by( key: 'footer_email' ).value %>"><span itemprop="email"><%= GeneralContent.find_by( key: 'footer_email' ).value %></span></a></p>
+          <p><a href="tel:<%= GeneralContent.find_by( key: 'footer_phone' ).value %>"><span itemprop="telephone"><%= GeneralContent.find_by( key: 'footer_phone' ).value %></span></a></p>
         </div>
         <address class="column footer-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <h1 class="footer-small-titles">Visit</h1>
-          <p><span itemprop="streetAddress">Fridtjof Nansens vei 3</span></p>
-          <p><span itemprop="postalCode">1366</span> <span itemprop="addressLocality">Lysaker</span>, <span itemprop="addressCountry">Norway</span></p>
+          <p><span itemprop="streetAddress"><%= GeneralContent.find_by( key: 'footer_visit_street' ).value %></span></p>
+          <p><span itemprop="postalCode"><%= GeneralContent.find_by( key: 'footer_visit_zip' ).value %></span> <span itemprop="addressLocality"><%= GeneralContent.find_by( key: 'footer_visit_state' ).value %></span>, <span itemprop="addressCountry"><%= GeneralContent.find_by( key: 'footer_visit_country' ).value %></span></p>
         </address>
         <div class="column footer-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <h1 class="footer-small-titles">Mail</h1>
-          <p>P.O. Box <span itemprop="postOfficeBoxNumber">238</span></p>
-          <p><span itemprop="postalCode">1326</span> <span itemprop="addressLocality">Lysaker</span>, <span itemprop="addressCountry">Norway</span></p>
+          <p>P.O. Box <span itemprop="postOfficeBoxNumber"><%= GeneralContent.find_by( key: 'footer_mail_box' ).value %></span></p>
+          <p><span itemprop="postalCode"><%= GeneralContent.find_by( key: 'footer_mail_zip' ).value %></span> <span itemprop="addressLocality"><%= GeneralContent.find_by( key: 'footer_mail_state' ).value %></span>, <span itemprop="addressCountry"><%= GeneralContent.find_by( key: 'footer_mail_country' ).value %></span></p>
         </div>
         <div class="column footer-info">
           <h1 class="footer-small-titles">Social</h1>

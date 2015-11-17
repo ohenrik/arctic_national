@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103201705) do
+ActiveRecord::Schema.define(version: 20151110142035) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -70,6 +70,27 @@ ActiveRecord::Schema.define(version: 20151103201705) do
     t.string   "content_type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "post_items", force: :cascade do |t|
+    t.string   "item_type"
+    t.string   "image"
+    t.text     "caption"
+    t.string   "title"
+    t.text     "content"
+    t.integer  "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "position"
+  end
+
+  add_index "post_items", ["post_id"], name: "index_post_items_on_post_id"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "post_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "product_specifications", force: :cascade do |t|
