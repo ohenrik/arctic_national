@@ -6,7 +6,7 @@ ActiveAdmin.register Product do
       f.input :name
       f.input :second_name
       f.input :image, as: :file, :hint => f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : ""
-      has_many :product_specifications, sortable: :position do |ff|
+      has_many :product_specifications, sortable: :position, allow_destroy: true do |ff|
         ff.input :title
         ff.input :description
       end

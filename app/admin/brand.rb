@@ -4,7 +4,7 @@ ActiveAdmin.register Brand do
     f.inputs do
       f.input :name
       f.input :description
-      # f.input :logo, as: :file, :hint => f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : ""
+      f.input :logo, as: :file, hint: (f.object.logo.present? ? image_tag(f.object.logo.url(:admin_thumb)) : "")
     end
     f.actions
   end
