@@ -4,11 +4,10 @@ ActiveAdmin.register Post do
     f.inputs do
       f.input :title
 
-      has_many :post_items, sortable: :position do |ff|
-        # ff.input :image, as: :file, hint: (f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : "")
+      has_many :post_items, sortable: :position, allow_destroy: true do |ff|
+        ff.input :image , as: :file, hint: (ff.object.image.present? ? image_tag(ff.object.image.url(:admin_thumb)) : "")
         ff.input :title
         ff.input :content
-        ff.input :_destroy, :as => :boolean, :required => false, :label => 'Remove'
       end
     end
     f.actions
