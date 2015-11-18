@@ -9,6 +9,7 @@ ActiveAdmin.register Brand do
       has_many :products, heading: 'Sort products', sortable: :position, new_record: false do |ff|
         ff.input :name, input_html: { disabled: true }
         ff.input :second_name, input_html: { disabled: true }
+        ff.input :type_name, label: 'Product type', input_html: { disabled: true }
       end
     end
     f.actions

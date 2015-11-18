@@ -3,6 +3,7 @@ ActiveAdmin.register Product do
   form do |f|
     f.inputs do
       f.input :brand
+      f.input :product_type
       f.input :name
       f.input :second_name
       f.input :image, as: :file, :hint => f.object.image.present? ? image_tag(f.object.image.url(:thumb)) : ""
