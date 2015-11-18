@@ -40,6 +40,11 @@ gem "autoprefixer-rails"
 gem "carrierwave"
 # MiniMagick
 gem 'mini_magick'
+# Drag and drop sort interface for ActiveAdmin tables
+gem 'activeadmin-sortable'
+# A gem adding sorting, reordering capabilities to an active_record model, allowing it to
+# act as a list
+gem 'acts_as_list'
 
 
 
