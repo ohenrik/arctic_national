@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base
+class LogoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -20,14 +20,13 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [400,200]
   end
 
+  # TODO: Remember to customize these sizes!
   version :thumb do
     process resize_to_fit: [1000,1000]
   end
   version :laptop do
     process resize_to_fit: [2000,2000]
   end
-
-
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url

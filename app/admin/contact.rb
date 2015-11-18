@@ -1,17 +1,21 @@
 ActiveAdmin.register Contact do
 
+  config.sort_order = 'position_asc'
+  config.paginate   = false
+
+  sortable
+
   form do |f|
     f.inputs 'Contact' do
       f.input :name
-      f.input :position
       f.input :email
       f.input :phone
     end
     f.actions
   end
-  
+
   index do
-    # Gjør sorterbar!!!
+    sortable_handle_column
     column :name do |contact|
       link_to contact.name, edit_admin_contact_path(contact)
     end

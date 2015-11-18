@@ -11,6 +11,8 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+@import "activeadmin-sortable";
+
 // Theming
 $skinMainFirstColor: #333!default;
 $skinMainSecondColor: #999!default;
@@ -28,4 +30,10 @@ $skinBorderWindowColor: #dfe9ea!default;
 
 .file.input img {
   width: 20%;
+}
+
+input[disabled="disabled"],
+input[disabled] {
+  background-color: #F4F4F4;
+  border: 0px solid #F4F4F4 !important;
 }
