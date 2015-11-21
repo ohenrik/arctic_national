@@ -1,14 +1,23 @@
-ActiveAdmin.register Post, as: 'Events' do
+ActiveAdmin.register Post, as: 'Event' do
   menu parent: 'Posts', priority: 2
 
   form do |f|
     f.inputs do
       f.input :title
-      f.input :post_type, as: :hidden, input_html: { value: 'events' }
-      has_many :post_items, sortable: :position, allow_destroy: true do |ff|
-        ff.input :image , as: :file, hint: (ff.object.image.present? ? image_tag(ff.object.image.url(:admin_thumb)) : "")
-        ff.input :title
-        ff.input :content
+      f.input :post_type, as: :hidden, input_html: { value: 'event' }
+      has_many :post_items, sortable: :position, allow_destroy: true do |item|
+        item.input :item_type,
+          as: :select,
+          collection: [['Text', 'text'],['Image', 'image']],
+          include_blank: false,
+          input_html: { class: 'item_type'}
+
+        item.input :image, as: :file,
+          wrapper_html: { class: 'image-fields hidden-field'},
+          hint: (item.object.image.present? ? image_tag(item.object.image.url(:admin_thumb)) : "")
+
+        # item.input :title, wrapper_html: { class: 'text-fields'}
+        item.input :content, wrapper_html: { class: 'text-fields'}
       end
     end
     f.actions
@@ -24,6 +33,11 @@ ActiveAdmin.register Post, as: 'Events' do
   config.filters = false
 
   controller do
+    def new
+      @event = Post.new
+      @event.post_items.build
+    end
+
     def scoped_collection
       Post.where(post_type: 'event')
     end

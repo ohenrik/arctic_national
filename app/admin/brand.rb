@@ -6,12 +6,7 @@ ActiveAdmin.register Brand do
       f.input :name
       f.input :description
       f.input :logo, as: :file, hint: (f.object.logo.present? ? image_tag(f.object.logo.url(:admin_thumb)) : "")
-
-      # has_many :products, heading: 'Sort products', sortable: :position, new_record: false do |ff|
-      #   ff.input :name, input_html: { disabled: true }
-      #   ff.input :second_name, input_html: { disabled: true }
-      #   ff.input :type_name, label: 'Product type', input_html: { disabled: true }
-      # end
+      f.input :remove_logo, as: :boolean, required: :false, label: 'Remove logo' unless f.object.logo.blank?
     end
     f.actions
   end
@@ -20,9 +15,9 @@ ActiveAdmin.register Brand do
     column :name do |brand|
       link_to brand.name, edit_admin_brand_path(brand)
     end
-    # column :product_count do |b|
-    #   "Products: #{b.products.count}"
-    # end
+    column :product_count do |brand|
+      "Products: #{brand.products.count}"
+    end
     actions
   end
 
