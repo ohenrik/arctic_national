@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117234830) do
+ActiveRecord::Schema.define(version: 20151121140611) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -45,6 +45,17 @@ ActiveRecord::Schema.define(version: 20151117234830) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "brand_product_sub_categories", force: :cascade do |t|
+    t.integer  "brand_id"
+    t.integer  "product_sub_category_id"
+    t.integer  "position"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "brand_product_sub_categories", ["brand_id"], name: "index_brand_product_sub_categories_on_brand_id"
+  add_index "brand_product_sub_categories", ["product_sub_category_id"], name: "index_brand_product_sub_categories_on_product_sub_category_id"
 
   create_table "brands", force: :cascade do |t|
     t.string   "name"
@@ -93,6 +104,14 @@ ActiveRecord::Schema.define(version: 20151117234830) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "type_image"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "product_specifications", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -104,27 +123,27 @@ ActiveRecord::Schema.define(version: 20151117234830) do
 
   add_index "product_specifications", ["product_id"], name: "index_product_specifications_on_product_id"
 
-  create_table "product_types", force: :cascade do |t|
+  create_table "product_sub_categories", force: :cascade do |t|
     t.string   "name"
-    t.string   "type_image"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "position"
+    t.integer  "product_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
+
+  add_index "product_sub_categories", ["product_category_id"], name: "index_product_sub_categories_on_product_category_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "second_name"
     t.string   "image"
-    t.integer  "brand_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "position"
-    t.integer  "product_type_id"
-    t.integer  "type_position"
+    t.integer  "brand_id"
+    t.integer  "brand_product_sub_category_id"
   end
 
-  add_index "products", ["brand_id"], name: "index_products_on_brand_id"
-  add_index "products", ["product_type_id"], name: "index_products_on_product_type_id"
+  add_index "products", ["brand_product_sub_category_id"], name: "index_products_on_brand_product_sub_category_id"
 
 end

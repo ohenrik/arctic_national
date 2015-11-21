@@ -1,4 +1,6 @@
 ActiveAdmin.register GeneralContent do
+  menu priority: 12
+
   actions :all, except: [:new, :destroy, :create]
 
   config.sort_order = 'created_at_asc'
@@ -17,5 +19,5 @@ ActiveAdmin.register GeneralContent do
   end
 
   config.filters = false
-  
+
 end

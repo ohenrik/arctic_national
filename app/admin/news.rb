@@ -1,4 +1,5 @@
 ActiveAdmin.register Post, as: 'News' do
+  menu parent: 'Posts', priority: 1
 
   form do |f|
     f.inputs do

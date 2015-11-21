@@ -1,4 +1,5 @@
 ActiveAdmin.register Contact do
+  menu priority: 13
 
   config.sort_order = 'position_asc'
   config.paginate   = false

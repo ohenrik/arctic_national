@@ -46,6 +46,8 @@ gem 'activeadmin-sortable'
 # act as a list
 gem 'acts_as_list'
 
+gem 'pry-rails'
+
 
 
 # Use Unicorn as the app server
